@@ -1,3 +1,5 @@
+const { url } = require("inspector");
+
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js');
 
 if (workbox)
@@ -73,7 +75,7 @@ workbox.routing.registerRoute(
   self.addEventListener("install", function(event) {
     event.waitUntil(
       caches.open(workbox).then(function(cache) {
-        return cache.addAll(precacheAndRoute);
+        return cache.addAll(url);
       })
     );
   });
