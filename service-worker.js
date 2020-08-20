@@ -34,7 +34,7 @@ else
     { url: '/js/notifikasi.js', revision: '2' },
     { url: '/js/sw.js', revision: '2' },
     { url: 'https://fonts.googleapis.com/icon?family=Material+Icons', revision: '2' },
-    { url: 'https://fonts.gstatic.com/s/materialicons/v54/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff1', revision: '2' },
+    { url: 'https://fonts.gstatic.com/s/materialicons/v54/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2', revision: '2' },
 ],  {
 ignoreUrlParametersMatching: [/.*/]
 }
