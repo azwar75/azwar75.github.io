@@ -10,7 +10,7 @@ const vapidKeys = {
  
  
 webPush.setVapidDetails(
-   'mailto:example@yourdomain.org',
+   'https://azwar75.github.io/',
    vapidKeys.publicKey,
    vapidKeys.privateKey
 )
