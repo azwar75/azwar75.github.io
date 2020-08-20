@@ -50,7 +50,7 @@ workbox.routing.registerRoute(
 
 
   self.addEventListener("fetch", function(event) {
-    var base_url = "https://api.football-data.org/v1";
+    var base_url = "https://api.football-data.org/v2";
   
     if (event.request.url.indexOf(base_url) > -1) {
       event.respondWith(
