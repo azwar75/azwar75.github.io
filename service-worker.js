@@ -94,7 +94,7 @@ workbox.routing.registerRoute(
       }
       var options = {
         body: body,
-        icon: 'img/notification.png',
+        icon: '/image/logo.png',
         vibrate: [200, 50, 200],
         data: {
           dateOfArrival: Date.now(),
