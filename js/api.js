@@ -492,7 +492,6 @@ fetchAPI(`${base_url}/competitions/2002/teams`)
     })
 }
 
-
 //teams inggris
 function getTeamsinggris() {
   if ("caches" in window) {
@@ -549,8 +548,8 @@ fetchAPI(`${base_url}/competitions/2021/teams`)
       let teamsHTML = ""
         data.teams.forEach(function(team) {
         teamsHTML += `
-          <div class=""row>
-              <div class="col s12">
+            <div class="row">
+              <div class="col s12 ">
               <div class="card horizontal card-panel hoverable">
                 <div class="card-image">
                  <a href="./detailteam.html?id=${team.id}">
