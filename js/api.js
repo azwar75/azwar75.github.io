@@ -128,7 +128,7 @@ function getTeamById() {
             <div class="card">
             <div class="card horizontal">
               <div class="card-image ">
-                <img src=${team.crestUrl} alt="logo"/>
+                <img src=${team.crestUrl.replace( /^http:\/\//i, 'https://' )} alt="logo"/>
               </div>
               <div class="card-stacked">
                 <div class="card-content">
@@ -186,7 +186,7 @@ function getTeamById() {
       <div class="card ">
       <div class="card horizontal">
         <div class="card-image ">
-          <img src=${team.crestUrl} alt="logo"/>
+          <img src=${team.crestUrl.replace( /^http:\/\//i, 'https://' )} alt="logo"/>
         </div>
         <div class="card-stacked">
           <div class="card-content">
@@ -512,7 +512,7 @@ function getTeamsinggris() {
             <div class="card horizontal card-panel hoverable">
               <div class="card-image">
                <a href="./detailteam.html?id=${team.id}">
-                <img src="${team.crestUrl}" alt="logo">
+                <img src="${team.crestUrl.replace( /^http:\/\//i, 'https://' )}" alt="logo">
                 </a>
               </div>
               <div class="card-stacked">
@@ -553,7 +553,7 @@ fetchAPI(`${base_url}/competitions/2021/teams`)
               <div class="card horizontal card-panel hoverable">
                 <div class="card-image">
                  <a href="./detailteam.html?id=${team.id}">
-                  <img src="${team.crestUrl}">
+                  <img src="${team.crestUrl.replace( /^http:\/\//i, 'https://' )}">
                  </a>
                 </div>
                 <div class="card-stacked">
