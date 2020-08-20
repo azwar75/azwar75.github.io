@@ -70,7 +70,7 @@ workbox.routing.registerRoute(
   self.addEventListener("install", function(event) {
     event.waitUntil(
       caches.open(workbox).then(function(cache) {
-        return cache.addAll(urlsToCache);
+        return cache.addAll(workbox);
       })
     );
   });
