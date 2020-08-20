@@ -14,7 +14,7 @@ else
     { url: '/pages/home.html', revision: '1' },
     { url: '/pages/ligaspanyol.html', revision: '1' },
     { url: '/pages/ligajerman.html', revision: '1' },
-    { url: '/pages/ligainggris.html', revision: '1' },
+    { url: '/pages/saved.html', revision: '1' },
     { url: '/css/materialize.css', revision: '1' },
     { url: '/css/body.css', revision: '1' },
     { url: '/js/materialize.min.js', revision: '1' },

@@ -50,8 +50,6 @@ function loadPage(page) {
           getTeams();
          } else if (page === "ligaspanyol") {
          getTeamsSpan();
-        } else if (page === "ligainggris") {
-          getTeamsinggris();
         } else if (page === "ligajerman") {
           getTeamsjerm();
         } else if (page === "saved") {
