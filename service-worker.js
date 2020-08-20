@@ -33,6 +33,7 @@ else
     { url: '/js/idb.js', revision: '1' },
     { url: '/js/notifikasi.js', revision: '1' },
     { url: '/js/sw.js', revision: '1' },
+    { url: 'https://api.football-data.org/v2', revision: '1' },
     { url: 'https://fonts.googleapis.com/icon?family=Material+Icons', revision: '1' },
     { url: 'https://fonts.gstatic.com/s/materialicons/v54/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2', revision: '1' },
 ]);
@@ -45,18 +46,5 @@ workbox.routing.registerRoute(
 );
 
 
-  self.addEventListener("fetch", function(event) {
-    var base_url = "https://api.football-data.org/v2";
   
-    if (event.request.url.indexOf(base_url) > -1) {
-      event.respondWith(
-        caches.open(workbox).then(function(cache) {
-          return fetch(event.request).then(function(response) {
-            cache.put(event.request.url, response.clone());
-            return response;
-          })
-        })
-      );
-    } 
-  });
 
