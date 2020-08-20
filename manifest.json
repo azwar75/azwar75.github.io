@@ -1,6 +1,6 @@
 {
     "name": "Seputar Bola",
-    "short_name": "My PWA",
+    "short_name": "Seputar Bola",
     "description": "Aplikasi PWA pertama saya",
     "start_url": "/index.html",
     "display": "standalone",
