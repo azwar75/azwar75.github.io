@@ -33,7 +33,6 @@ else
     { url: '/js/idb.js', revision: '1' },
     { url: '/js/notifikasi.js', revision: '1' },
     { url: '/js/sw.js', revision: '1' },
-    { url: 'https://api.football-data.org/v2', revision: '1' },
     { url: 'https://fonts.googleapis.com/icon?family=Material+Icons', revision: '1' },
     { url: 'https://fonts.gstatic.com/s/materialicons/v54/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2', revision: '1' },
 ],  {
