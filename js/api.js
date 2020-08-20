@@ -78,29 +78,29 @@ fetchAPI(`${base_url}/competitions/2019/teams`)
     .then(function(data) {
       console.log(data)
       let teamsHTML = ""
-        data.teams.forEach(function(teams) {
+        data.teams.forEach(function(team) {
         teamsHTML += `
 
               <div class="col s12 m7">
               <div class="card horizontal card-panel hoverable">
                 <div class="card-image">
-                 <a href="./detailteam.html?id=${teams.id}">
-                  <img src="${teams.crestUrl.replace( /^http:\/\//i, 'https://' )}">
+                 <a href="./detailteam.html?id=${team.id}">
+                  <img src="${team.crestUrl.replace( /^http:\/\//i, 'https://' )}">
                  </a>
                 </div>
                 <div class="card-stacked">
                   <div class="card-content">
-                  <h4>${teams.name} </h4>
+                  <h4>${team.name} </h4>
                     <p>
                       <ul>
-                        <li>Negara : ${teams.area.name}</li>
-                        <li>Stadion : ${teams.venue}</li>
-                        <li>Website : ${teams.website}</li>
+                        <li>Negara : ${team.area.name}</li>
+                        <li>Stadion : ${team.venue}</li>
+                        <li>Website : ${team.website}</li>
                       </ul>
                     </p>
                   </div>
                   <div class="card-action">
-                    <a href="./detailteam.html?id=${teams.id}">More Informasi </a>
+                    <a href="./detailteam.html?id=${team.id}">More Informasi </a>
                   </div>
                 </div>
               </div>
