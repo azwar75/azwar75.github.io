@@ -2,7 +2,7 @@
     if ("serviceWorker" in navigator) {
         window.addEventListener("load", function() {
           navigator.serviceWorker
-            .register("../service-worker1.js")
+            .register("../service-worker.js")
             .then(function() {
               console.log("Pendaftaran ServiceWorker berhasil");
             })
