@@ -11,10 +11,6 @@ else
     { url: '/css/materialize.min.css', revision: '2' },
     { url: '/js/materialize.min.js', revision: '2' },
     { url: '/detailteam.html', revision: '2' },
-    { url: '/pages/home.html', revision: '2' },
-    { url: '/pages/ligaspanyol.html', revision: '2' },
-    { url: '/pages/ligajerman.html', revision: '2' },
-    { url: '/pages/saved.html', revision: '2' },
     { url: '/css/materialize.css', revision: '2' },
     { url: '/css/body.css', revision: '2' },
     { url: '/js/materialize.min.js', revision: '2' },
@@ -38,63 +34,27 @@ else
 ],  {
 ignoreUrlParametersMatching: [/.*/]
 }
-
 );
+
 
 workbox.routing.registerRoute(
-  new RegExp('/pages/'),
-    workbox.strategies.staleWhileRevalidate({
-        cacheName: 'pages'
-    })
+	new RegExp('https://api.football-data.org/v2/'),
+	workbox.strategies.networkFirst({
+		cacheName: 'fetch',
+	})
 );
 
-
-  self.addEventListener("fetch", function(event) {
-    var base_url = "https://api.football-data.org/v2";
-  
-    if (event.request.url.indexOf(base_url) > -1) {
-      event.respondWith(
-        caches.open(workbox).then(function(cache) {
-          return fetch(event.request).then(function(response) {
-            cache.put(event.request.url, response.clone());
-            return response;
-          })
-        })
-      );
-    } else {
-      event.respondWith(
-        caches.match(event.request, { ignoreSearch: true }).then(function(response) {
-          return response || fetch (event.request);
-        })
-      )
-    }
-  });
-  
-  self.addEventListener("activate", function(event) {
-      event.waitUntil(
-        caches.keys().then(function(cacheNames) {
-          return Promise.all(
-            cacheNames.map(function(cacheName) {
-              if (cacheName != workbox) {
-                console.log("ServiceWorker: cache " + cacheName + " dihapus");
-                return caches.delete(cacheName);
-              }
-            })
-          );
-        })
-      );
-    });
-  
     self.addEventListener('push', function(event) {
-      var body;
+      let body;
       if (event.data) {
         body = event.data.text();
       } else {
         body = 'Push message no payload';
       }
-      var options = {
+      let options = {
         body: body,
         icon: '/image/logo.png',
+        badge: '/image/logo.png',
         vibrate: [100, 50, 100],
         data: {
           dateOfArrival: Date.now(),
