@@ -39,7 +39,7 @@ ignoreUrlParametersMatching: [/.*/]
 
 workbox.routing.registerRoute(
 	new RegExp('https://api.football-data.org/v2/'),
-	workbox.strategies.networkFirst({
+	workbox.strategies.staleWhileRevalidate({
 		cacheName: 'fetch',
 	})
 );
